@@ -1,18 +1,31 @@
+import CardServices from "./CardServices";
+import { cardServices } from "./servicesFields";
 
  export default function Services() {
    return (
      <section
-       className="w-full h-[45vh] lg:h-[90vh] relative top-0 bg-cover bg-center py-14 rounded-xl shadow-2xl"
+       className="w-full h-[45vh] lg:h-[900px] relative top-0 bg-cover bg-center my-8 rounded-xl shadow-2xl p-4"
        style={{
          backgroundImage: `url("/Posso-Ajudar.jpg")`,
        }}
      >
        {/* Overlay preto com 50% de opacidade */}
-       <div className="w-full absolute inset-0 bg-black/50"></div>
+       <div className="w-full absolute inset-0 bg-[var(--color-secondary)]/20"></div>
 
        {/* Conteúdo por cima da imagem e overlay */}
-       <div className="relative z-10 flex items-center justify-center h-full text-white">
-         <h1 className="text-4xl font-bold text-[var(--color-secondary)]">Posso Ajudar?</h1>
+       <header className="relative z-10 flex flex-col items-center  text-white gap-2">
+         <h1 className="text-4xl font-bold ">Serviços</h1>
+         <h2 className="text-4xl font-bold text-[#00ffff]">Posso te Ajudar?</h2>
+         <p className="text-lg">Transformamos suas ideias em soluções digitais sob medida</p>
+       </header>
+
+       <div className=" relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-around mx-auto w-full z-10">
+         {
+           cardServices &&
+           cardServices.map((service, i) => (
+             <CardServices key={i} title={ service.title} description={ service.description} icon={ service.icon}/>
+             ))
+           }
        </div>
      </section>
    )
