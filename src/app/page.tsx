@@ -5,6 +5,7 @@ import ModalProjects from "./components/modal/ModalProjects";
 import Projects from "./components/Projects";
 import CardTechnology from "./components/technology/CardTechnology";
 import Services from "./components/services/Services";
+import Trajectory from "./components/trajectory/Trajectory";
 
 
 export default function Home() {
@@ -14,13 +15,12 @@ export default function Home() {
       <Suspense fallback={<div>Carregando modal...</div>}>
         <ModalProjects />
       </Suspense>
-
-      <Hero />
+       <Hero />
       <CardTechnology />
-
       <Suspense fallback={<div>Carregando projetos...</div>}>
         <Projects />
       </Suspense>
+      <Trajectory/>
       <Services/>
       <CardContact />
     </main>

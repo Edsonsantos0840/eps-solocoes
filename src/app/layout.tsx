@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Poppins, Open_Sans } from "next/font/google";
+import { Poppins, Open_Sans,  } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/navBar/NavBar";
+import Footer from "./components/navBar/Footer";
 
 const poppinsSans = Poppins({
   variable: "--font-poppins",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <NavBar/>
         {children}
+        <Footer />
       </body>
     </html>
   );

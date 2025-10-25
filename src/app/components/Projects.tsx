@@ -17,12 +17,12 @@ export default function Projects() {
   }
 
   return (
-    <section onClick={openModal} id="projetos" className="w-full scroll-margin-top border-[.5px] border-black/15 rounded p-4 lg:my-8 cursor-pointer">
-      <h2 className="text-3xl font-bold text-center my-4">Projetos</h2>
+    <section onClick={openModal} id="projetos" className="w-full scroll-margin-top border-[.5px] border-[var(--color-foreground)]/15 rounded p-4 lg:my-8 cursor-pointer">
+      <h2 className="text-3xl font-bold text-center my-4">Clique para ver os projetos</h2>
       <div className="grid grid-cols-1 lg:grid-cols-[5fr_2fr] my-8">
         <figure className=" lg:w-[800px] lg:h-[350px]">
           <Image
-            src={'/EPS_files/emidio2.png'}
+            src={'/EPS_files/bcard3.png'}
             alt="Imagem do projeto"
             width={800}
             height={350}
@@ -35,19 +35,19 @@ export default function Projects() {
           <strong>Sou especializado em:</strong>
           <div className="flex flex-wrap justify-between mt-2">
             <div className="space-y-2">
-              <TbBrandTypescript className="text-black/80 text-6xl md:text-6xl lg:text-6xl" />
+              <TbBrandTypescript className="text-[var(--color-foreground)]/80 text-6xl md:text-6xl lg:text-6xl" />
               <p className='text-xs'>TYPESCRIPT</p>
             </div>
             <div className="space-y-2">
-              <FaReact className="text-black/80 text-6xl md:text-6xl lg:text-6xl" />
+              <FaReact className="text-[var(--color-foreground)]/80 text-6xl md:text-6xl lg:text-6xl" />
               <p className='text-xs'>REACT</p>
             </div>
             <div className="space-y-2">
-              <TbBrandNextjs className="text-black/80 text-6xl md:text-6xl lg:text-6xl" />
+              <TbBrandNextjs className="text-[var(--color-foreground)]/80 text-6xl md:text-6xl lg:text-6xl" />
               <p className='text-xs'>NEXT.JS</p>
             </div>
             <div className="space-y-2">
-              <TbBrandTailwind className="text-black/80 text-6xl md:text-6xl lg:text-6xl" />
+              <TbBrandTailwind className="text-[var(--color-foreground)]/80 text-6xl md:text-6xl lg:text-6xl" />
               <p className='text-xs'>TAILWIND</p>
             </div>
 
@@ -61,7 +61,7 @@ export default function Projects() {
             <p>Sites Personalizados</p>
             <p>Desenvolvimento Web</p>
           </div>
-        </div>     
+        </div>
       </div>
     </section>
   )

@@ -1,11 +1,12 @@
 import CardSocialMedia from "../socials/CardSocialMedia";
+import ContactForm from "./FormContact";
 
 
 export default function CardContact() {
   return (
     <section
       id="contato"
-      className="container-main scroll-margin-top w-full text-[var(--color-foreground)] space-y-4 text-center"
+      className="container-main scroll-margin-top w-full text-[var(--color-foreground)] space-y-2 text-center"
       aria-labelledby="titulo-contato"
     >
         <header className=" ">
@@ -22,7 +23,10 @@ export default function CardContact() {
             Redes sociais
           </h4>
           <CardSocialMedia />
-        </section>
+      </section>
+      <section>
+        <ContactForm/>
+      </section>
     </section>
   );
 }
