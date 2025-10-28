@@ -6,7 +6,7 @@ export default function CardContact() {
   return (
     <section
       id="contato"
-      className="container-main scroll-margin-top w-full text-[var(--color-foreground)] space-y-2 text-center"
+      className="container-main scroll-margin-top w-full text-[var(--color-foreground)] space-y-2 text-center px-2 "
       aria-labelledby="titulo-contato"
     >
         <header className=" ">

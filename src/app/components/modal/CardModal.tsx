@@ -5,19 +5,19 @@ import Link from "next/link";
 
 export default function CardModal({ current }: { current: number }) {
     return (
-        <div className="w-full mb-2  space-y-8 " >
+        <div className="w-full mb-2 space-y-4 lg:space-y-8 " >
 
-            <h2 className="text-3xl font-semibold text-center">{projetos[current].nome}</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-center">{projetos[current].nome}</h2>
             <div className="">
-                <p className=" text-justify text-lg">{projetos[current].descrição}</p>
+                <p className=" text-justify lg:text-lg">{projetos[current].descrição}</p>
             </div>
-            <ul className="flex justify-between gap-6 t-14">
+            <ul className="flex justify-between gap-2 lg:gap-6 ">
                 {projetos[current].links && projetos[current].links.map((link, i) => {
                     const [key, value] = Object.entries(link)[0];
 
                     return (
                         <div key={i} className="space-y-2 hover:scale-110 text-center transition-all ease-in duration-300">
-                            <p className="text-sm text-[var(--color-foreground)]/60">{value[0]}</p>
+                            <p className="text-sm hidden lg:block text-[var(--color-foreground)]/60">{value[0]}</p>
 
                             <Link
                                 href={value[1]}

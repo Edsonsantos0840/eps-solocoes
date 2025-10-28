@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
-import { FaRegCommentDots } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaRegCommentDots, FaUser } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import { FieldsFormContact } from "./FieldsFormContact";
 
@@ -85,7 +85,7 @@ export default function ContactForm() {
 
             {status && (
                 <div
-                    className="mb-4 text-center text-sm text-white gradientePrincipal font-raleway p-2 rounded"
+                    className="mb-4 text-center text-sm text-black/80 font-raleway p-2 rounded"
                     role="alert"
                     aria-live="polite"
                 >
@@ -99,29 +99,73 @@ export default function ContactForm() {
                 noValidate
             >
                 {/* Campos de Input */}
-                {FieldsFormContact.map((item, i) => (
-                    <div key={i} className="relative">
-                        <label htmlFor={item.name} className="sr-only">
-                            {item.placeholder}
-                        </label>
-                        {item.ico && (
-                            <span className="absolute left-1 top-6  text-gray-700">
-                                {item.ico}
-                            </span>
-                        )}
-                        <input
-                            id={item.name}
-                            type={item.type}
-                            name={item.name}
-                            value={data.nome}
-                            onChange={handleChange}
-                            placeholder={item.placeholder}
-                            className="w-full pl-10 p-4 md:p-3 text-center border border-black/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                            aria-required="true"
-                        />
-                    </div>
-                ))}
+    
+                <div className="relative">
+                    <label htmlFor='nome' className="sr-only">
+                        Nome:
+                    </label>
+
+                    <span className="absolute left-1 top-6  text-gray-700">
+                        <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700" />
+                    </span>
+
+                    <input
+                        id='nome'
+                        type='text'
+                        name='nome'
+                        value={data.nome}
+                        onChange={handleChange}
+                        placeholder="Digite seu nome "
+                        className="w-full pl-10 p-4 md:p-3 text-center border border-black/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                        aria-required="true"
+                    />
+                </div>
+
+                <div className="relative">
+                    <label htmlFor='email' className="sr-only">
+                        E-mail:
+                    </label>
+
+                    <span className="absolute left-1 top-6  text-gray-700">
+                        <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700" />
+                    </span>
+
+                    <input
+                        id='email'
+                        type='email'
+                        name='email'
+                        value={data.email}
+                        onChange={handleChange}
+                        placeholder="Digite seu email "
+                        className="w-full pl-10 p-4 md:p-3 text-center border border-black/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                        aria-required="true"
+                    />
+                </div>
+
+                <div className="relative">
+                    <label htmlFor='telefone' className="sr-only">
+                        E-mail:
+                    </label>
+
+                    <span className="absolute left-1 top-6  text-gray-700">
+                        <FaPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700" />
+                    </span>
+
+                    <input
+                        id='telefone'
+                        type='tel'
+                        name='telefone'
+                        value={data.telefone}
+                        onChange={handleChange}
+                        placeholder="Digite seu telefone "
+                        className="w-full pl-10 p-4 md:p-3 text-center border border-black/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                        aria-required="true"
+                    />
+                </div>
+                
 
                 {/* Campo de Mensagem */}
                 <div className="relative">

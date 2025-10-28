@@ -5,7 +5,7 @@ export default function CardTechnology() {
   return (
     <section
       id="tecnologia"
-      className="scroll-margin-top"
+      className="scroll-margin-top px-2 "
       aria-labelledby="titulo-tecnologias"
     >
       <div className=" w-full ">
@@ -16,7 +16,7 @@ export default function CardTechnology() {
             >
               Tecnologias
             </h2>
-            <p className="text-[var(--color-foreground)]">
+          <p className="text-[var(--color-foreground)] text-justify text:xl lg:text-base md:text-left">
             Tenho me especializado em desenvolvimento Front-end, com foco em criar interfaces modernas, responsivas e de alta performance. Trabalho com as principais tecnologias do mercado
             </p>
           </header>

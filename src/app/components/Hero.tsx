@@ -7,11 +7,11 @@ import { projetos } from "./projects/ProjetosFields";
 
 export default function Hero() {
   return (
-    <section className="grid grid-cols-1 scroll-margin-top lg:grid-cols-[5fr_2fr] lg:gap-3 lg:my-4 "
+    <section className=" scroll-margin-top  lg:my-4 "
       id="inicio"
     >
-      <article className="">
-        <div className="md:flex md:gap-8 md:px-8 lg:px-0">
+      <article className="grid grid-cols-1 lg:grid-cols-[5fr_2fr] lg:gap-3">
+        <div className="md:flex md:gap-8 md:px-8 ">
           <figure className=" rounded-full w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] mx-auto">
             <Image
               src={'/programador.png'}
@@ -23,43 +23,37 @@ export default function Hero() {
           </figure>
           <div className="lg:my-8 space-y-2 text-center md:text-left">
             <h1 className="text-2xl font-bold lg:pr-2">Edson Santos <span className="text-lg font-light text-[var(--color-foreground)]/70">Programador Front-End</span></h1>
-            <div className="flex gap-2 justify-between">
-              <div className="flex items-center gap-2 space-y-2">
-                {/* <BsStarFill /> */}
-                <strong className="text-2xl border-[1px] border-[var(--color-foreground)]/60 rounded-full px-2">{projetos.length}</strong>
-                <p>Projetos até o momento</p>
+            <div className="flex flex-col md:flex-row gap-2 justify-between">
+              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2">
+                <strong className="text-3xl lg:text-2xl border-[1px] border-[var(--color-foreground)]/60 rounded-full px-2 lg:px-2">{projetos.length}</strong>
+                <p className="text-2xl md:text-lg lg:base">Projetos até o momento</p>
               </div>
 
-              <div className="flex items-center gap-2 space-y-2">
-                |
-                <AiOutlineRise />
-                <AiOutlineRise />
-                <p>Outros projetos em breve.</p>
+              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2"> 
+                <p className="hidden lg:block" >|</p>
+                <AiOutlineRise className="text-2xl md:text-lg lg:base" />
+                <AiOutlineRise className="text-2xl md:text-lg lg:base" />
+                <p className="text-2xl md:text-lg lg:base">Outros projetos em breve.</p>
               </div>
             </div>
-            <p className="text-justify md:text-left">
+            <p className="text-justify text:xl lg:text-base md:text-left px-2">
               Desenvolvemos interfaces web intuitivas e responsivas,
               que proporcionam uma excelente experiência do usuário.
             </p>
-            <div className="flex justify-between gap-4">
-              <p>Criando o futuro</p>
-              <AiOutlineCodepen size={24} />
-              <p>Desenvolvendo soluções</p>
-              <AiOutlineBulb size={22} />
+            <div className="flex flex-col md:flex-row justify-between gap-4">
+              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2"> 
+                <p className="text-2xl md:text-lg lg:base">Criando o futuro</p>
+                <AiOutlineCodepen className="text-4xl lg:base" />
+              </div>
+              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2"> 
+                <p className="text-2xl md:text-lg lg:base">Desenvolvendo soluções</p>
+                <AiOutlineBulb className="text-4xl lg:base" />
+                </div>
             </div>
           </div>
         </div>
-        <div className="my-4 md:my-0">
-          <h2 className="text-2xl text-center md:text-left font-semibold ">Sobre </h2>
-          <p className="text-justify ">
-            Olá, sou Edson Santos, desenvolvedor front-end apaixonado por tecnologia e aprendizado constante.
-            Venho de uma origem simples, e desde cedo aprendi o valor do esforço e da dedicação. Antes da programação, trabalhei em diversas áreas — da roça à área comercial — o que me trouxe muita experiência com pessoas, disciplina e resiliência.
-            Hoje, encontrei na tecnologia o que realmente me motiva: transformar ideias em soluções digitais.
-            Sou comprometido, curioso e gosto de aprender algo novo todos os dias. Meu objetivo é crescer como profissional e contribuir com projetos que façam a diferença.
-          </p>
-          </div>
-      </article>
-      <article className="space-y-12">
+        
+      <article className="space-y-12 px-2 md:flex md:justify-between lg:flex-col">
         <CardSocialMedia />
         <div className="lg:p-4 shadow-sm rounded-2xl space-y-6 border-[.5px] border-[var(--color-foreground)]/15">
           <div className="flex justify-around items-center gap-4 pt-2 md:p-0">
@@ -86,19 +80,30 @@ export default function Hero() {
           </Link>
 
         </div>
-        <div className="relative hidden lg:block">
-          <figure className=" w-[140px] h-[140px] rounded-md absolute right-0 top-0 hover:scale-105 transition-all duration-500 delay-300" >
-            <Image
-              src={'/logo.png'}
-              alt="Imagem do programador Edson Santos"
-              width={250}
-              height={250}
-              className="rounded-md"
-            />
-          </figure>
-        </div>
       </article>
-
+      </article>
+      <>
+        <h2 className="text-2xl text-center md:text-left font-semibold px-2">Sobre </h2>
+        <div className="my-4 md:my-2 md:flex justify-between gap-4 px-2">
+          <p className="text-justify text:xl lg:text-base   ">
+            Olá, sou Edson Santos, desenvolvedor front-end apaixonado por tecnologia e aprendizado constante.
+            Venho de uma origem simples, e desde cedo aprendi o valor do esforço e da dedicação. Antes da programação, trabalhei em diversas áreas — da roça à área comercial — o que me trouxe muita experiência com pessoas, disciplina e resiliência.
+            Hoje, encontrei na tecnologia o que realmente me motiva: transformar ideias em soluções digitais.
+            Sou comprometido, curioso e gosto de aprender algo novo todos os dias. Meu objetivo é crescer como profissional e contribuir com projetos que façam a diferença.
+          </p>
+          <div className="relative hidden md:block">
+            <figure className=" w-[140px] h-[140px] rounded-md  hover:scale-105 transition-all duration-500 delay-300" >
+              <Image
+                src={'/logo.png'}
+                alt="Imagem do programador Edson Santos"
+                width={250}
+                height={250}
+                className="rounded-md"
+              />
+            </figure>
+          </div>
+        </div>
+        </>
     </section>
   )
 }

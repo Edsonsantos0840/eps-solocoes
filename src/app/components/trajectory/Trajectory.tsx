@@ -5,17 +5,9 @@ import { LuLightbulb } from "react-icons/lu";
 export default function Trajectory() {
   return (
       <section className="relative w-full h-auto my-8 p-4 ">
-          
-          {/* <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 "
-              style={{
-                 backgroundImage: `url("/EPS_files/9.png")`,
-                  width: '400px'
-              }}
-             ></div> */}
               
           <article className="max-w-[1100px] m-auto">
-              <h2 className="text-3xl font-bold flex justify-center gap-4 my-4"><LuLightbulb className="text-4xl" />Minha trajetória um pouco mais detalhada. </h2>
+              <h2 className="text-3xl font-bold flex justify-center gap-4 my-4"><LuLightbulb className="text-4xl" />Minha trajetória <span className="hidden lg:block">um pouco mais detalhada</span>. </h2>
               <p className="text-lg text-justify">
                   Olá, sou Edson Santos, desenvolvedor front-end e eterno apaixonado por tecnologia.
                   Minha jornada até aqui não foi simples, mas é justamente ela que moldou quem sou hoje. Venho de uma família humilde, que infelizmente não teve condições de me oferecer oportunidades de estudo desde cedo. Isso me fez aprender desde muito jovem o valor do esforço, da resiliência e da autodisciplina.

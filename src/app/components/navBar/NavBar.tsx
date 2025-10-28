@@ -10,7 +10,7 @@ export default function NavBar() {
     >
       {/* Logo ou nome da empresa */}
       <div className="container-main flex justify-between items-center">
-        <figure className="hidden md:block hover:scale-105 ease-in duration-300 md:px-4 lg:px-0">
+        <figure className="hidden md:block hover:scale-105 ease-in duration-300 md:px-4 ">
           <Link href="/" className="font-semibold text-xl  ">
            EPS Soluções
           </Link>

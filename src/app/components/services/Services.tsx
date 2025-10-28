@@ -4,7 +4,7 @@ import { cardServices } from "./servicesFields";
  export default function Services() {
    return (
      <section
-       className="w-full h-auto lg:h-[900px] relative top-0 bg-repeat lg:bg-no-repeat bg-cover bg-center my-8 rounded-xl shadow-2xl p-4"
+       className="w-full h-auto xl:h-[900px] relative top-0 bg-repeat lg:bg-no-repeat bg-cover bg-center my-8 rounded-xl shadow-md p-4"
        style={{
          backgroundImage: `url("/Posso-Ajudar.jpg")`,
        }}

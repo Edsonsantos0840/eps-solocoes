@@ -4,7 +4,7 @@ import { SocialMediaFields } from "./SocialMediaFields";
 export default function CardSocialMedia() {
   return (
     <nav
-      className="flex justify-around md:justify-end items-center gap-4 md:gap-6 md:mb-8"
+      className="flex justify-around md:justify-end items-center gap-3 md:gap-6 md:mb-8 "
       aria-label="Redes sociais"
     >
       <ul className="flex gap-4 transition-all ease-in duration-300">
