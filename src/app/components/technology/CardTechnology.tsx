@@ -12,7 +12,7 @@ export default function CardTechnology() {
           <header className="">
             <h2
               id="titulo-tecnologias"
-            className="text-[var(--color-foreground)] text-2xl font-semibold"
+            className="text-[var(--color-foreground)] text-2xl font-semibold my-[1rem]"
             >
               Tecnologias
             </h2>
