@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Open_Sans,  } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/navBar/NavBar";
-import Footer from "./components/navBar/Footer";
+import NavBar from "./components/layout/NavBar";
+import Footer from "./components/layout/Footer";
 
 const poppinsSans = Poppins({
   variable: "--font-poppins",
