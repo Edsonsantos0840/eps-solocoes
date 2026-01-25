@@ -1,4 +1,4 @@
-import CardProject from "@/app/components/projects/CardProject";
+import CardProject from "@/features/projects/components/CardProject";
 
 export default function Shangrila() {
   return <CardProject current={2} />

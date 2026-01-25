@@ -1,6 +1,6 @@
-import CardProject from "@/app/components/projects/CardProject"
+import CardProject from "@/features/projects/components/CardProject"
 
 export default function Marmore() {
   return <CardProject current={0} />
-  
+
 }

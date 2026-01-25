@@ -3,7 +3,7 @@
 import { FaRegCommentDots } from "react-icons/fa";
 import { contactFields } from "./contactFields";
 import { ContactInput } from "./ContactInput";
-import { useContactForm } from "@/hooks/useContactForm";
+import { useContactForm } from "@/features/hooks/useContactForm";
 
 export default function ContactForm() {
 

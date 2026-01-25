@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins, Open_Sans,  } from "next/font/google";
-import "./globals.css";
-import NavBar from "./components/layout/NavBar";
-import Footer from "./components/layout/Footer";
+import { Poppins, Open_Sans, } from "next/font/google";
+import "../style/globals.css";
+import NavBar from "../components/layout/NavBar";
+import Footer from "../components/layout/Footer";
 
 const poppinsSans = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], 
-  style: ["normal", "italic"],  
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 const opens = Open_Sans({
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${poppinsSans.variable} ${opens.variable} antialiased`}
       >
-        <NavBar/>
+        <NavBar />
         {children}
         <Footer />
       </body>

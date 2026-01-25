@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineBulb, AiOutlineCodepen, AiOutlineRise, AiOutlineSend } from "react-icons/ai";
 import CardSocialMedia from "./socials/CardSocialMedia";
-import { projetos } from "./projects/ProjetosFields";
+import { projetos } from "../features/projects/components/ProjetosFields";
 
 
 export default function Hero() {
@@ -29,7 +29,7 @@ export default function Hero() {
                 <p className="text-2xl md:text-lg lg:base">Projetos até o momento</p>
               </div>
 
-              <div className="hidden md:flex justify-center lg:justify-baseline items-center gap-2 space-y-2"> 
+              <div className="hidden md:flex justify-center lg:justify-baseline items-center gap-2 space-y-2">
                 <p className="hidden lg:block" >|</p>
                 <AiOutlineRise className="text-2xl md:text-lg lg:base" />
                 <AiOutlineRise className="text-2xl md:text-lg lg:base" />
@@ -41,46 +41,46 @@ export default function Hero() {
               que proporcionam uma excelente experiência do usuário.
             </p>
             <div className="hidden md:flex flex-col md:flex-row justify-between gap-4">
-              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2"> 
+              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2">
                 <p className="text-2xl md:text-lg lg:base">Criando o futuro</p>
                 <AiOutlineCodepen className="text-4xl lg:base" />
               </div>
-              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2"> 
+              <div className="flex justify-center lg:justify-baseline items-center gap-2 space-y-2">
                 <p className="text-2xl md:text-lg lg:base">Desenvolvendo soluções</p>
                 <AiOutlineBulb className="text-4xl lg:base" />
-                </div>
+              </div>
             </div>
           </div>
         </div>
-        
+
         <article className="space-y-4 lg:space-y-12 p-2 md:flex md:justify-around  lg:justify-center lg:flex-col">
-        <CardSocialMedia />
+          <CardSocialMedia />
           <div className="lg:p-2 shadow-sm rounded-2xl space-y-6 md:space-y-1 border-[.5px] border-[var(--color-foreground)]/15">
-          <div className="flex justify-around items-center gap-4 md:gap-2 pt-2 md:p-0">
-            <figure className=" rounded-full w-[100px] h-[100px] lg:w-[80px] lg:h-[80px]">
-              <Image
-                src={'/programador.png'}
-                alt="Imagem do programador Edson Santos"
-                width={100}
-                height={100}
-                className="rounded-full"
-              />
-            </figure>
-            <div>
-              <h1 className="text-2xl md:text-xl font-bold lg:pr-2">Edson Santos </h1>
-              <span className="text-base font-light text-[var(--color-foreground)]/70">Programador Front-End</span>
+            <div className="flex justify-around items-center gap-4 md:gap-2 pt-2 md:p-0">
+              <figure className=" rounded-full w-[100px] h-[100px] lg:w-[80px] lg:h-[80px]">
+                <Image
+                  src={'/programador.png'}
+                  alt="Imagem do programador Edson Santos"
+                  width={100}
+                  height={100}
+                  className="rounded-full"
+                />
+              </figure>
+              <div>
+                <h1 className="text-2xl md:text-xl font-bold lg:pr-2">Edson Santos </h1>
+                <span className="text-base font-light text-[var(--color-foreground)]/70">Programador Front-End</span>
+              </div>
+
             </div>
+            <Link href={'/'} className="cursor-pointer">
+              <strong className="flex justify-center items-center mx-auto w-[80%] mb-4 lg:mb-0 shadow-md bg-[var(--color-foreground)]/90  text-white hover:bg-[var(--color-foreground)] hover:scale-105 transition-all ease-in duration-300 gap-2 p-2 rounded text-center">
+                <AiOutlineSend size={20} />
+                Fale Conosco
+              </strong>
+            </Link>
 
           </div>
-          <Link href={'/'} className="cursor-pointer">
-            <strong className="flex justify-center items-center mx-auto w-[80%] mb-4 lg:mb-0 shadow-md bg-[var(--color-foreground)]/90  text-white hover:bg-[var(--color-foreground)] hover:scale-105 transition-all ease-in duration-300 gap-2 p-2 rounded text-center">
-              <AiOutlineSend size={20} />
-              Fale Conosco
-            </strong>
-          </Link>
-
-        </div>
-      </article>
+        </article>
       </article>
       <>
         <h2 className="text-2xl text-center md:text-left font-semibold px-2 my-[1rem]">Sobre </h2>
@@ -103,7 +103,7 @@ export default function Hero() {
             Sou comprometido, curioso e gosto de aprender algo novo todos os dias. Meu objetivo é crescer como profissional e contribuir com projetos que façam a diferença.
           </p>
         </div>
-        </>
+      </>
     </section>
   )
 }
