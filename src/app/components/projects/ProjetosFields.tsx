@@ -1,5 +1,12 @@
 import { StaticImageData } from "next/image";
 
+export interface imgProjectProps{
+  id: number,
+  nome: string,
+  img: (string | StaticImageData),
+  link: string
+}
+
 export interface ProjetosProps {
   nome: string;
   descrição: string;
@@ -12,6 +19,45 @@ export interface ProjetosProps {
     Back_End?: string[];
   }[];
 }
+
+export const imgProject: imgProjectProps[] = [
+  {
+    id: 1,
+    nome: "M&A Marmores e Granitos.",
+    img: '/EPS_files/marmore1.png',
+    link: '/projects/marmore'
+  },
+  {
+    id: 2,
+    nome: "Martinez Tattoo Stúdios.",
+    img: '/EPS_files/martinez1.png',
+    link: '/projects/tattoo'
+  },
+  {
+    id: 3,
+    nome: "Shangrilá Residencial para idosos.",
+    img: '/EPS_files/shangrila1.png',
+    link: '/projects/shangrila'
+  },
+  {
+    id: 4,
+    nome: "Mingo Doces.",
+    img: '/EPS_files/mingo1.png',
+    link: '/projects/mingo'
+  },
+  {
+    id: 5,
+    nome: "Espaço Emídio e Sá.",
+    img: '/EPS_files/emidio1.png',
+    link: '/projects/emidio'
+  },
+  {
+    id: 6,
+    nome: "BrasilCard.",
+    img: '/EPS_files/bcard1.png',
+    link: '/projects/BrasilCard'
+  },
+]
 
 
 export const projetos: ProjetosProps[] = [

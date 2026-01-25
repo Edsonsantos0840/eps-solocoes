@@ -1,13 +1,19 @@
 import Image, { StaticImageData } from "next/image";
-import { projetos } from "../projects/ProjetosFields";
+import { projetos } from "./ProjetosFields";
 import Link from "next/link";
 
 
-export default function CardModal({ current }: { current: number }) {
+export default function CardProject({ current }: { current: number }) {
     return (
-        <div className="w-full mb-2 space-y-4 lg:space-y-8 " >
+        <main className="container-main w-full mb-2 space-y-4 lg:space-y-8 pt-14" >
+            <Link href={'/'}
+                
+                className="bg-[var(--color-foreground)]/90 text-white px-4 py-2  rounded cursor-pointer hover:bg-[var(--color-foreground)] hover:scale-105"
+            >
+                Voltar
+            </Link>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-center">{projetos[current].nome}</h2>
+            <h1 className="text-2xl md:text-3xl font-semibold text-center">{projetos[current].nome}</h1>
             <div className="">
                 <p className=" text-justify lg:text-lg">{projetos[current].descrição}</p>
             </div>
@@ -30,20 +36,6 @@ export default function CardModal({ current }: { current: number }) {
                     );
                 })}
             </ul>
-            {/* <h3 className="my-4 text-xl font-semibold ">Tecnologias utilizadas</h3>
-          <ul
-              className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto"
-          >
-              {projetos[current].technology &&
-                  projetos[current].technology.map((tech: string, i: number) => (
-                      <span
-                          key={i}
-                          className="py-1 px-3 border border-[var(--color-foreground)]/15 rounded-full text-base flex-grow basis-[120px] text-center"
-                      >
-                          {tech}
-                      </span>
-                  ))}
-          </ul> */}
             <div className="space-y-2 mx-auto">
                 {
                     projetos[current].imagens &&
@@ -54,6 +46,6 @@ export default function CardModal({ current }: { current: number }) {
                     ))
                 }
             </div>
-        </div>
+        </main>
     )
 }

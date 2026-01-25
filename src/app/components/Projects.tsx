@@ -1,35 +1,37 @@
 'use client'
 import Image from "next/image";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { FaReact } from "react-icons/fa";
-import { TbBrandNextjs, TbBrandTailwind, TbBrandTypescript } from "react-icons/tb";
 
+import { imgProject, imgProjectProps } from "./projects/ProjetosFields";
+import Link from "next/link";
 
 export default function Projects() {
-  const pathname = usePathname();
-  const searchParames = useSearchParams();
-  const route = useRouter()
-
-  function openModal() {
-    const params = new URLSearchParams(searchParames.toString())
-    params.set('modal', 'projetos');
-    route.replace(`${pathname}?${params.toString()}`)
-  }
-
+ 
   return (
-    <section onClick={openModal} id="projetos" className="w-full scroll-margin-top border-[.5px] border-[var(--color-foreground)]/15 rounded p-4 xl:my-8 cursor-pointer">
+    <section className="w-full scroll-margin-top border-[.5px] text-[var(--color-foreground)]/90 border-[var(--color-foreground)]/15 rounded p-4 xl:my-8 ">
       <h2 className="text-3xl font-bold text-center my-4">Clique para ver os projetos</h2>
-      <div className="grid grid-cols-1 xl:grid-cols-[5fr_2fr] my-8">
-        <figure className="xl:w-[800px] xl:h-[350px] mx-auto">
-          <Image
-            src={'/EPS_files/bcard3.png'}
-            alt="Imagem do projeto"
-            width={800}
-            height={350}
-            className=""
-          />
-        </figure>
-        <div className="md:my-8 space-y-6 md:text-xl xl:text-sm m-auto">
+      <div className="grid grid-cols-1 xl:grid-cols-2 my-8 gap-8 p-2 ">
+        {
+          imgProject &&
+          imgProject.map((project: imgProjectProps) => (
+           <Link href={project.link} key={project.id}>
+            <article className="cursor-pointer">
+                <h2 className="text-xl font-bold text-center my-2">{project.nome}</h2>
+              
+              <figure className="w-full mx-auto rounded-2xl hover:scale-105 transition ease-in-out duration-500">
+                <Image
+                  src={project.img}
+                  alt="Imagem do projeto"
+                  width={600}
+                  height={280}
+                  className="rounded-2xl"
+                />
+              </figure>
+
+            </article>
+           </Link>
+          ))
+        }
+        {/* <div className="md:my-8 space-y-6 md:text-xl xl:text-sm m-auto">
           <h1 className="text-xl font-bold text-center xl:text-right">Edson Santos
             <span className="text-lg font-light text-[var(--color-foreground)]/70 text-center xl:text-right">Programador Front-End</span></h1>
           <strong className="text-center xl:text-right">Sou especializado em:</strong>
@@ -61,7 +63,7 @@ export default function Projects() {
             <p>Sites Personalizados</p>
             <p>Desenvolvimento Web</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

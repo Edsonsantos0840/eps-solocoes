@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { links } from "./NavFields";
-import Image from "next/image";
 
 export default function NavBar() {
   return (

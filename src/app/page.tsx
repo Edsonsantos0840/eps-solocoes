@@ -12,14 +12,9 @@ export default function Home() {
   return (
     <main className="container-main font-[var(--font-poppins)] pt-[4rem]">
       {/* ✅ Encapsula os dois componentes CLIENTE em Suspense */}
-      <Suspense fallback={<div>Carregando modal...</div>}>
-        <ModalProjects />
-      </Suspense>
        <Hero />
       <CardTechnology />
-      <Suspense fallback={<div>Carregando projetos...</div>}>
         <Projects />
-      </Suspense>
       <Trajectory/>
       <Services/>
       <CardContact />

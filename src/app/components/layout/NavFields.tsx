@@ -5,19 +5,11 @@ interface LinksProps{
 
   export const links: LinksProps[] = [
     {
-      link: "#inicio",
+      link: "/",
       text: "Início"
      },
     {
-      link: "#projetos",
+      link: "/projects/marmore",
       text: "Projetos"
      },
-    {
-      link: "#tecnologia",
-      text: "Tecnologias"
-     },
-    {
-      link: "#contato",
-      text: "Contatos"
-     }
   ]
