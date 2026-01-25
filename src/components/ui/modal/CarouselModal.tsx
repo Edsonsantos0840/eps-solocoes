@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import CardModal from "../../../features/projects/components/CardProject";
-import { projetos } from "../../../features/projects/components/ProjetosFields";
+import { projetos } from "../../../features/projects/components/data/ProjetosFields";
 
 export default function CarouselModal() {
     const [current, setCurrent] = useState(0)

@@ -1,7 +1,6 @@
 
 import { LuLightbulb } from "react-icons/lu";
 
-
 export default function Trajectory() {
   return (
       <section className="relative w-full h-auto p-4 ">

@@ -1,12 +1,6 @@
-import { IconType } from "react-icons";
-import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 
-export interface ContactField {
-    name: string;
-    type: string;
-    placeholder: string;
-    icon: IconType;
-}
+import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
+import { ContactField } from "../types";
 
 export const contactFields: ContactField[] = [
     {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { links } from "./NavFields";
+import { links } from "./data/NavFields";
 
 export default function NavBar() {
   return (
@@ -11,7 +11,7 @@ export default function NavBar() {
       <div className="container-main flex justify-between items-center">
         <figure className="hidden md:block hover:scale-105 ease-in duration-300 md:px-4 ">
           <Link href="/" className="font-semibold text-xl  ">
-           EPS Soluções
+            EPS Soluções
           </Link>
         </figure>
 

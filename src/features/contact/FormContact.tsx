@@ -1,7 +1,7 @@
 
 "use client";
 import { FaRegCommentDots } from "react-icons/fa";
-import { contactFields } from "./contactFields";
+import { contactFields } from "./data/contactFields";
 import { ContactInput } from "./ContactInput";
 import { useContactForm } from "@/features/hooks/useContactForm";
 

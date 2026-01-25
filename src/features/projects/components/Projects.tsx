@@ -1,8 +1,8 @@
-'use client'
-import Image from "next/image";
 
-import { imgProject, imgProjectProps } from "./ProjetosFields";
+import Image from "next/image";
+import { imgProject} from "./data/ProjetosFields";
 import Link from "next/link";
+import { imgProjectProps } from "./types";
 
 export default function Projects() {
 

@@ -1,4 +1,4 @@
-import CardSocialMedia from "../../components/socials/CardSocialMedia";
+import CardSocialMedia from "../social/CardSocialMedia";
 import ContactForm from "./FormContact";
 
 

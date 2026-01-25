@@ -1,4 +1,4 @@
-import { addressData, contactData } from "./FooterData";
+import { addressData, contactData } from "./data/FooterData";
 
 export default function Footer() {
     return (

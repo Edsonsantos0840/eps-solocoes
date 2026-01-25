@@ -1,12 +1,4 @@
-export interface AddressData {
-    cidade: string;
-    estado: string;
-}
-
-export interface ContactData {
-    telefone: string;
-    email: string;
-}
+import { AddressData, ContactData } from "../types";
 
 export const addressData: AddressData = {
     cidade: "Campinas",

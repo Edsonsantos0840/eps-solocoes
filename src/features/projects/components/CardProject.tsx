@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { projetos } from "./ProjetosFields";
+import { projetos } from "./data/ProjetosFields";
 import Link from "next/link";
 
 
@@ -7,7 +7,7 @@ export default function CardProject({ current }: { current: number }) {
     return (
         <main className="container-main w-full mb-2 space-y-4 lg:space-y-8 pt-14" >
             <Link href={'/'}
-                
+
                 className="bg-[var(--color-foreground)]/90 text-white px-4 py-2  rounded cursor-pointer hover:bg-[var(--color-foreground)] hover:scale-105"
             >
                 Voltar

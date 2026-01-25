@@ -1,8 +1,5 @@
 import { CardServicesProps } from "./servicesFields";
 
-
-
-
 export default function CardServices({ title, description, icon: Icon }: CardServicesProps) {
   return (
     <article className="bg-white text-[var(--color-foreground)]/90 rounded-lg shadow-lg text-center space-y-2 p-3 mt-4 hover:scale-110 ransition-all ease-in duration-300">

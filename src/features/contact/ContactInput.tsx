@@ -1,17 +1,4 @@
-import { IconType } from "react-icons";
-import React from "react";
-
-interface ContactInputProps {
-    name: string;
-    type: string;
-    placeholder: string;
-    icon: IconType;
-    value: string;
-
-    onChange: (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => void;
-}
+import { ContactInputProps } from "./types";
 
 export function ContactInput({
     name,
