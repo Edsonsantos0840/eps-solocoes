@@ -2,7 +2,7 @@ import CardSocialMedia from "../socials/CardSocialMedia";
 import ContactForm from "./FormContact";
 
 
-export default function CardContact() {
+export default function ContactSection() {
   return (
     <section
       id="contato"

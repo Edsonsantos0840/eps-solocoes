@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import CardContact from "./components/contact/CardContact";
+import CardContact from "./components/contact/ContactSection";
 import Hero from "./components/Hero";
 import ModalProjects from "./components/modal/ModalProjects";
 import Projects from "./components/Projects";
