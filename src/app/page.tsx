@@ -2,7 +2,7 @@ import CardContact from "../features/contact/ContactSection";
 import Hero from "../features/home/components/hero/Hero";
 import Projects from "../features/projects/components/Projects";
 import CardTechnology from "../features/technology/CardTechnology";
-import Services from "../components/services/Services";
+import Services from "../features/specialties/Specialties";
 import Trajectory from "../features/about/Trajectory";
 
 export default function Home() {
