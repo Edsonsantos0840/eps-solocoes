@@ -4,7 +4,8 @@ import { links } from "./data/NavFields";
 export default function NavBar() {
   return (
     <nav
-      className=" fixed top-0 left-0 w-full bg-[var(--color-foreground)]/90 text-white font-[var(--font-poppins)] shadow-sm z-20 border-b-[1px] border-b-[var(--color-foreground)]/15 py-2 "
+      className=" fixed top-0 left-0 backdrop-blur-md
+ w-full bg-[var(--color-foreground)]/90 text-white font-[var(--font-poppins)] shadow-sm z-20 border-b-[1px] border-b-[var(--color-foreground)]/15 py-2 "
       aria-label="Menu de navegação principal"
     >
       {/* Logo ou nome da empresa */}

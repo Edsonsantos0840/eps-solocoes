@@ -6,15 +6,13 @@ import { TechnologyItem } from "./types";
 
 export default function CardProject({ current }: { current: number }) {
     // Força ficar entre indice 0 e 5.
-    if (current > 5) {
-        current = 0
-    } else if (current < 0) {
-        current = 5
-    };
+    const total = projectsPage.length;
 
+    const nextIndex = (current + 1) % total;
+    const prevIndex = (current - 1 + total) % total;
     // Cria as urls Próximo projeto e projeto anterior 
-    const urlNext = `/${projectsPage[current + 1]}`;
-    const urlPrevious = `/${projectsPage[current - 1]}`;
+    const urlNext = `/${projectsPage[nextIndex]}`;
+    const urlPrevious = `/${projectsPage[prevIndex]}`;
 
     // faz o map nos links
     const getLinks = projetos[current].links.map((link, i) => {
@@ -40,7 +38,7 @@ export default function CardProject({ current }: { current: number }) {
         const Icon = tech.icon;
         return (
 
-            <li key={i} className="hover:scale-110 text-md text-center bg-[var(--color-foreground)]/10 w-32 h-24 pt-2 m-auto shadow-md text-[var(--color-foreground)]/90 transition-all ease-in duration-300">
+            <li key={i} className="hover:scale-110 text-md text-center bg-[var(--color-foreground)]/20 w-32 h-24 pt-2 m-auto shadow-md text-[var(--color-foreground)]/90 transition-all ease-in duration-300">
                 {tech.name}
                 <Icon className="text-2xl mx-auto mt-2 text-center" />
             </li>
@@ -51,7 +49,7 @@ export default function CardProject({ current }: { current: number }) {
     const getHighlights = projetos[current].highlights.map((item: string, i: number) => {
 
         return (
-            <li key={i} className="list-none hover:scale-105 text-sm  h-12 p-1  m-auto shadow-md bg-[var(--color-foreground)]/10 text-[var(--color-foreground)]/90 transition-all ease-in duration-300">{item}</li>
+            <li key={i} className="list-none hover:scale-105 text-sm  h-12 p-1  m-auto shadow-md bg-[var(--color-foreground)]/20 text-[var(--color-foreground)]/90 transition-all ease-in duration-300">{item}</li>
         )
     });
 
