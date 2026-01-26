@@ -6,7 +6,23 @@ export const links: LinksProps[] = [
     text: "Início"
   },
   {
-    link: "/projects/marmore",
+    link: "/marmore",
     text: "Projetos"
+  },
+  {
+    link: "#sobre",
+    text: "Sobre"
+  },
+  {
+    link: "#especialidade",
+    text: "Especialidades"
+  },
+  {
+    link: "#tecnologias",
+    text: "Tecnologias"
+  },
+  {
+    link: "#contatos",
+    text: "Contatos"
   },
 ]

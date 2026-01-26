@@ -3,7 +3,7 @@ import { specialties } from "./data/specialtiesFields";
 
 export default function Specialties() {
   return (
-    <section
+    <section id="especialidade"
       className="w-full h-auto xl:h-[600px] relative top-0 bg-repeat lg:bg-no-repeat bg-cover bg-center my-8 rounded-xl shadow-md p-4"
       style={{
         backgroundImage: `url("/Posso-Ajudar.jpg")`,
