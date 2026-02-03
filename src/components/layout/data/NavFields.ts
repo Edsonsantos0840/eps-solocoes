@@ -10,16 +10,8 @@ export const links: LinksProps[] = [
     text: "Projetos"
   },
   {
-    link: "/#sobre",
-    text: "Sobre"
-  },
-  {
     link: "/#especialidade",
     text: "Especialidades"
-  },
-  {
-    link: "/#tecnologia",
-    text: "Tecnologias"
   },
   {
     link: "/#contato",

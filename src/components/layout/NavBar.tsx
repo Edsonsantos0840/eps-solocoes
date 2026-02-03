@@ -17,7 +17,7 @@ export default function NavBar() {
         </figure>
 
         {/* Links de navegação */}
-        <ul className="flex gap-8 mx-auto transition-all ease-in duration-300">
+        <ul className="flex gap-2 md:gap-8 mx-auto transition-all ease-in duration-300">
           {links.map((link) => (
             <li key={link.text} className="text-lg hover:scale-110 ease-in duration-300 ">
               <Link href={link.link} >
