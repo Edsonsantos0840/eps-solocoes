@@ -7,12 +7,12 @@ export default function ProjectTechnologies({ projetos, current }: { projetos: P
         const Icon = tech.icon;
         return (
 
-            <li key={i} className="hover:scale-110 rounded-md text-md text-center bg-[var(--color-foreground)]/20 w-32 h-28 pt-2 m-auto shadow-md text-[var(--color-foreground)]/90 transition-all ease-in duration-300">
+            <li key={i} className="hover:scale-110 rounded-md text-md text-center bg-foreground/20 w-32 h-28 pt-2 m-auto shadow-md text-foreground/90 transition-all ease-in duration-300">
                 {tech.name}
                 <Icon className="text-4xl mx-auto mt-2 text-center" />
             </li>
         )
     });
 
-    return <ul className="flex justify-between items-center gap-4 ">{getTechnologies} </ul>
+    return <ul className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 items-center p-2 md:p-0 gap-4 ">{getTechnologies} </ul>
 }
