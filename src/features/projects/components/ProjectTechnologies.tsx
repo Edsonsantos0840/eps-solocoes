@@ -7,7 +7,7 @@ export default function ProjectTechnologies({ projetos, current }: { projetos: P
         const Icon = tech.icon;
         return (
 
-            <li key={i} className="hover:scale-110 rounded-md text-md text-center bg-foreground/20 w-32 h-28 pt-2 m-auto shadow-md text-foreground/90 transition-all ease-in duration-300">
+            <li key={i} className="hover:scale-110 rounded-md text-md text-center bg-foreground/20 w-28 h-24 md:w-32 md:h-28 pt-2 m-auto shadow-md text-foreground/90 transition-all ease-in duration-300">
                 {tech.name}
                 <Icon className="text-4xl mx-auto mt-2 text-center" />
             </li>
