@@ -26,17 +26,17 @@ export default function CardProject({ current }: { current: number }) {
             {/* Sessão dos botões */}
             <header className="flex justify-between">
                 <Link href={urlPrevious}
-                    className="flex justify-between items-center gap-2 bg-[var(--color-foreground)]/90 text-white px-4 py-2  rounded cursor-pointer hover:bg-[var(--color-foreground)] hover:scale-105"
+                    className="flex justify-between items-center gap-2 bg-foreground/90 text-white px-2 py-1 md:px-4 md:py-2  rounded cursor-pointer hover:bg-foreground hover:scale-105"
                 >
-                    <FaChevronLeft/>
+                    <FaChevronLeft className=" hidden md:flex "/>
                     Voltar
                 </Link>
                 <h1 className="text-2xl md:text-3xl font-semibold text-center">{projetos[current].name}</h1>
                 <Link href={urlNext}
-                    className="flex justify-between items-center  gap-2 bg-[var(--color-foreground)]/90 text-white px-4 py-2  rounded cursor-pointer hover:bg-[var(--color-foreground)] hover:scale-105"
+                    className="flex justify-between items-center  gap-2 bg-foreground/90 text-white px-2 py-1 md:px-4 md:py-2  rounded cursor-pointer hover:bg-foreground hover:scale-105"
                 >
                     Proximo
-                    <FaChevronRight/>
+                    <FaChevronRight className=" hidden md:flex "/>
                 </Link>
             </header>
 
